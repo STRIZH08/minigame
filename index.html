@@ -10,6 +10,7 @@
    body{
      background: #101010;
      max-height: 1000px;
+     color: white;
    }
     .fulltxt {
       color: #000;
@@ -33,6 +34,7 @@
       background: linear-gradient(45deg, #28C3F7, #B563FF);
       padding: .5em 1em;
       border-radius: .5em;
+        color: white;
     }
     
     a {
@@ -89,10 +91,10 @@
     .popup {
       display: none;
       position: absolute;
-      left: 35%;
+      left: 40%;
       background: #28C3F7;
       border: 2px solid #1C87AB;
-      width: 30%;
+      width: 20%;
       height: 100px;
       z-index: 1000;
       top: 120px;
@@ -124,10 +126,10 @@
       position: absolute;
       margin: 0 auto;
       top: 67px;
-      width: 90px;
+      width: 100px;
       font-weight: 600;
       height: 25px;
-      background: whitesmoke;
+      background: #000;
     }
     
     .resetbtn:active {
@@ -230,10 +232,10 @@ setInterval(auto, 1);
     }
     if (table[n] < 25) {
       table[n] = 26;
-      $('.' + n + '').css("background", "#28C3F7")
+      $('.' + n + '').css("background", "#6eff90")
       i++;
-      $('.popup').html('<p>' + balance[i] + 'x</p>      <input class="resetbtn" type="button" value="Играть снова" onclick="window.location.reload()">')
-      bal.value = (balance[i] + 'x');
+      $('.popup').html('<p>Счет: ' + balance[i] + '</p><input class="resetbtn" type="button" value="Перезапуск" onclick="window.location.reload()">')
+      bal.value = ("Счет: " + balance[i]);
       if (i == 22) {
         $('.win').css('display', 'flex')
         $('.win').css('display', 'flex')
@@ -245,7 +247,7 @@ setInterval(auto, 1);
 
 <body>
   <center>
-    <input type="submit" value="1" id='balance'>
+    <input type="submit" value="0" id='balance'>
   </center>
   <br>
   <center>
@@ -280,18 +282,18 @@ setInterval(auto, 1);
   <div class="lose popup window">
     Проигрыш
     <br/>
-    <input class="resetbtn" type="button" value="Сначала" onclick="window.location.reload()">
+    <input class="resetbtn" type="button" value="Перезапуск" onclick="window.location.reload()">
   </div>
   <div class="lose bgpopup bgwindow"></div>
   <div class="win popup window">
     <input type="submit" value="1" id='balanc'> Выйгрыш
     <br/>
-    <input class="resetbtn" type="button" value="Сначала" onclick="window.location.reload()">
+    <input class="resetbtn" type="button" value="Перезапуск" onclick="window.location.reload()">
   </div>
   <div class="win bgpopup bgwindow"></div>
   <br>
   <center>
- <input type="button" value="Играть сначала" onclick="window.location.reload()">
+ <input type="button" value="Перезапуск" onclick="window.location.reload()">
   <input onclick="check(openx)" style="font-weight: bold" type="button" value="Авто">
   </center>
   <br>
